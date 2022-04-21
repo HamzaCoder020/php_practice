@@ -21,6 +21,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $username = trim($_POST["username"]);
     }
 
+    //ewqedwqe wqe 
     // Check if password is empty
     if (empty(trim($_POST["password"]))) {
         $password_err = "Please enter your password.";
