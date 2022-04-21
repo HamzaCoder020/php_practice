@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <link rel="stylesheet" href="./style.css">
+    <script src="script.js"></script>
+    <script type="text/javascript" src="products.json"></script>
+    <title>Java Script</title>
+
+</head>
+<body>
+<div class="java_script_task">
+    <div class="container">
+        <form action="javascript:addproduct();" class="needs-validation">
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom01">Brand name</label>
+                    <input type="text" name="brand" class="form-control" id="validationCustom01" placeholder="Brand name" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationCustom02">Product name</label>
+                    <input type="text" class="form-control" id="validationCustom02" placeholder="Product name" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="colorOfproduct">Colour</label>
+                    <input type="text" class="form-control" id="colorOfproduct" placeholder="Color of Product" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="priceOfproduct">Price</label>
+                    <input type="text" class="form-control" id="priceOfproduct" placeholder="Price of product" required>
+                </div>
+            </div>
+            <button id="submit_button" class="btn btn-primary" type="submit" value="Submit">Add Product</button></form>
+        <div class="row" id="products">
+
+        </div>
+
+
+    </div>
+</div>
+
+</body>
+</html>
