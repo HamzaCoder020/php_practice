@@ -20,7 +20,7 @@
         <div class="col s12 m5 login">
             <h4 class="center">Log in</h4>
             <br>
-            <form action="check.php" method="post" autocomplete="off">
+            <form action="login.php" method="post" autocomplete="off">
                 <div class="row">
                     <div class="input-field">
                         <input type="text" id="user" name="username" class="validate" required="required" placeholder="Username">
@@ -45,7 +45,7 @@
                         </label>
                     </div>
                     <div class="col s6">
-                        <button type="submit" name="login" class="btn waves-effect waves-light blue right">Log in</button>
+                        <button type="submit" name="login " class="btn waves-effect waves-light blue right">Log in</button>
                     </div>
                 </div>
             </form>
@@ -53,9 +53,12 @@
         <!-- Signup form -->
         <div class="col s12 m7 signup">
             <div class="signupForm">
+                <div class="clear_signup" style="position: relative; ">
+                    <i class="material-icons " id="cancel_signup" style="position: absolute; right: 0px; cursor: pointer;">cancel</i>
+                </div>
                 <h4 class="center">Sign up</h4>
                 <br>
-                <form action="regCheck.php" name="signup" method="post" autocomplete="off">
+                <form action="register.php" name="signup" method="post" autocomplete="off">
                     <div class="row">
                         <div class="input-field col s12 m6">
                             <input type="text" id="name-picked" name="namepicked" class="validate" required="required" placeholder="Enter a username">
@@ -72,17 +75,17 @@
                     <div class="row">
                         <div class="input-field email">
                             <div class="col s12">
-                                <input type="text" id="email" name="email" class="validate" required="required" placeholder="Enter your email">
+                                <input type="email" id="email" name="email" class="validate" required="required" placeholder="Enter your email">
                                 <label for="email">
                                     <i class="material-icons">mail</i>
                                 </label>
                             </div>
                         </div>
                     </div>
-                </form>
                 <div class="row">
-                    <button type="submit" name="btn-signup" class="btn blue right waves-effect waves-light">Sign Up</button>
+                    <button type="submit" name="submit" class="btn blue right waves-effect waves-light">Sign Up</button>
                 </div>
+                </form>
             </div>
             <div class="signup-toggle center" >
                 <h4 class="center">Have No Account ? <a href="#!">Sign Up</a></h4>
@@ -97,7 +100,7 @@
                     <p class="grey-text policy center">By signing up, you agree on our <a href="#!">Privacy Policy</a> and  <a href="#!">Terms of Use</a> including <a href="#!">Cookie Use</a>.</p>
                 </div>
                 <div class="col s12 m5">
-                    <p class="center grey-text" style="font-size: 14px;">Coding : <a href="http://fb.com/celyes01" class="main-title red-text" target="_blank">Celyes</a></p>
+                    <p class="center grey-text" style="font-size: 14px;">Coding : <a  class="main-title red-text" target="_blank">Hamza Javed</a></p>
                 </div>
             </div>
 
@@ -122,6 +125,11 @@
             $(this).hide();
             $(".signupForm").show(300);
             $(".policy").css("visibility","visible");
+        });
+        $("#cancel_signup").click(function (){
+            $(".signupForm").hide();
+            $(".signup-toggle").fadeIn();
+            $(".policy").css("visibility","hidden");
         });
     });
 </script>
