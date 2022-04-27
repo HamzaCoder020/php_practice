@@ -1,3 +1,11 @@
+<?php
+
+if(isset($_COOKIE['member_login'])){
+    header("location:premium.php");
+}
+
+?>
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -22,10 +30,13 @@
             <br>
             <form action="login.php" method="post" autocomplete="off">
                 <div class="row">
-                    <div class="input-field">
-                        <input type="text" id="user" name="username" class="validate" required="required" placeholder="Username">
-                        <label for="user">
-                            <i class="material-icons">person</i>                </label>
+                    <div class="input-field email">
+                        <div class="col s12">
+                            <input type="email" id="email" name="email" class="validate" required="required" placeholder="Enter your email">
+                            <label for="email">
+                                <i class="material-icons">mail</i>
+                            </label>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -39,13 +50,13 @@
                 <div class="row">
                     <div class="switch col s6">
                         <label>
-                            <input type="checkbox">
+                            <input type="checkbox" name="remember">
                             <span class="lever"></span>
                             Remember Me
                         </label>
                     </div>
                     <div class="col s6">
-                        <button type="submit" name="login " class="btn waves-effect waves-light blue right">Log in</button>
+                        <button type="submit" name="submit" class="btn waves-effect waves-light blue right">Log in</button>
                     </div>
                 </div>
             </form>
@@ -123,7 +134,7 @@
         $('.modal').modal();
         $(".signup-toggle").click(function(){
             $(this).hide();
-            $(".signupForm").show(300);
+            $(".signupForm").show(50);
             $(".policy").css("visibility","visible");
         });
         $("#cancel_signup").click(function (){
@@ -132,6 +143,10 @@
             $(".policy").css("visibility","hidden");
         });
     });
+
+
+
+
 </script>
 
 </body>
